@@ -7,6 +7,7 @@ int fps = 30;
 String soundFile = "data/song.wav";
 String videoFile = "data/export.mp4";
 
+int margin = 4;
 int antiAlias = 2;
 boolean doMask = true;
 int colorMask = 0xFF4444FF;
@@ -26,7 +27,7 @@ SoundFile sf;
 VideoExport vx;
 
 int aframes, dframes;
-int hh, hq, pc;
+int hh, hhm, hq, pc;
 float x, y, oy, sy;
 
 void setup() {
@@ -40,6 +41,7 @@ void setup() {
   smooth(antiAlias);
 
   hh = height / 2;
+  hhm = hh - margin;
   hq = hh / 2;
   pc = width * height - 1;
   
