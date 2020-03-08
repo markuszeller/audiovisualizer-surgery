@@ -22,7 +22,7 @@ color backgroundColor = color(0, 0, 0);
 
 // END config
 
-Amplitude amp;
+Waveform wf;
 SoundFile sf;
 VideoExport vx;
 
@@ -48,8 +48,8 @@ void setup() {
   sf = new SoundFile(this, soundFile);
   sf.play();
 
-  amp = new Amplitude(this);
-  amp.input(sf);
+  wf = new Waveform(this, 1);
+  wf.input(sf);
   
   background(backgroundColor);
 
@@ -60,13 +60,8 @@ void setup() {
 
 void update() {
 
-  float v = amp.analyze();
-  y = 0;
-  if(v > threshold && v <= .5) {
-    y = map(v, 0, .5, -hh, 0);
-  } else if(v > threshold && v > .5) {
-    y = map(v, .5, 1, 0, hh);
-  }
+  wf.analyze();
+  y = map(wf.data[0], -1, 1, -hhm, hhm);
   
   if (y == oy) sy++;
   else sy = 0;
