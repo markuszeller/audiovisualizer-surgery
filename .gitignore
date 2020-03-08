@@ -1,3 +1,4 @@
 /ffmpeg.txt
 /data/*
 !/data/.gitkeep
+/.idea
