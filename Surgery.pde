@@ -3,8 +3,6 @@ import processing.sound.*;
 
 // BEGIN config 
 
-float threshold = 0.01;
-
 int fps = 30;
 String soundFile = "data/song.wav";
 String videoFile = "data/export.mp4";
