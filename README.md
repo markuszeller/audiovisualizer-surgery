@@ -45,6 +45,9 @@ To specify the render size set the resolution in the setup() method. For HD I us
 - **videoFile**  
     Filename of the the video file to be exported. It should be written into the data directory an look like "data/export.mp4".
 
+- **margin**  
+    Keep a margin from top and bottom of the rendered lines.
+
 - **antiAlias**  
     When drawing the lines, they are smoothed by antiAlias value. 2 would affect a 2x2 blurring.
 
